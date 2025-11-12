@@ -1,0 +1,143 @@
+/* Container principal da calculadora */
+.imc-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Título */
+.imc-container h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulário */
+.imc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Container dos campos */
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.imc-form label {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Inputs */
+.imc-form input {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.imc-form input:focus {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.imc-form input:hover {
+  background: white;
+}
+
+/* Botão */
+.calc-button {
+  padding: 14px 24px;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.calc-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(45deg, #ee5a52, #ff6b6b);
+}
+
+.calc-button:active {
+  transform: translateY(0);
+}
+
+/* Mensagens de resultado e erro */
+.resultado {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.resultado.sucesso {
+  /* Fundo mais claro, borda mais sutil */
+  background: rgba(178, 228, 178, 0.753);
+  color: #1b5e20;
+  border: 1px solid rgba(76, 175, 80, 0.12);
+  box-shadow: none;
+}
+
+.resultado.erro {
+  /* Fundo mais claro, borda mais sutil */
+  background: rgba(250, 199, 195, 0.699);
+  color: #b71c1c;
+  border: 1px solid rgba(244, 67, 54, 0.12);
+  box-shadow: none;
+}
+
+/* Animação de fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .imc-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .imc-container h2 {
+    font-size: 24px;
+  }
+
+  .calc-button {
+    font-size: 16px;
+  }
+}
